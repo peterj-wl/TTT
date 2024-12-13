@@ -9,6 +9,6 @@ public sealed class Board
         var freeSquares = new List<int>();
         
         var random = new Random();
-        return freeSquares[random.Next(freeSquares.Count)];
+        return random.Next(0, freeSquares.Count);
     }
 }
