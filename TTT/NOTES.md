@@ -17,3 +17,4 @@ Then for final make the inside work which is more or less the autoplay
 -Find an empty random square
 input = none
 output = a random square that is free in the board (e.g square 8). If the board does not have any spots then return -1 (to avoid using exceptions)
+
