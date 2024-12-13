@@ -24,4 +24,6 @@ public sealed class Board
 
         return availableSquares;
     }
+    
+    public char[] GetSquares() => _squares;
 }

@@ -16,4 +16,19 @@ public class Tests
         // Assert
         Assert.InRange(availablePosition, 0, 8);
     }
+    
+    [Fact]
+    public void PlaceMarker_Bot1PlaysMarkerOnSquarePositionOne_ShouldPlaceMarkerOnSquareOneOnBoard()
+    {
+        // Arrange
+        var player = new Player();
+        var board = new Board();
+        var expectedBoard = new char[] { '\0', 'X', '\0', '\0', '\0', '\0', '\0', '\0', '\0' };
+
+        // Act
+        player.PlaceMarker(board, 1);
+
+        // Assert
+        Assert.Equal(expectedBoard, board.GetSquares());
+    }
 }
