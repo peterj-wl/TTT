@@ -21,7 +21,7 @@ public class Tests
     public void PlaceMarker_Bot1PlaysMarkerOnSquarePositionOne_ShouldPlaceMarkerOnSquareOneOnBoard()
     {
         // Arrange
-        var player = new Player();
+        var player = new Player("Bot1", 'X');
         var board = new Board();
         var expectedBoard = new char[] { '\0', 'X', '\0', '\0', '\0', '\0', '\0', '\0', '\0' };
 
