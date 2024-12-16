@@ -107,4 +107,19 @@ public class Tests
         // Assert
         Assert.Equal('\0', winner);
     }
+    
+        [Fact]
+    public void IsBoardFull_AllPositionsIsTakenOnBoard_ShouldReturnThatBoardIsFull()
+    {
+        // Arrange
+        var game = new Game();
+        int[] positions = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+        // Act
+        foreach (var position in positions)
+            game.CurrentPlayerMakeMove(position);
+
+        // Assert
+        Assert.True(game.IsBoardFull());
+    }
 }

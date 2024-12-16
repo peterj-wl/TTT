@@ -55,4 +55,5 @@ public sealed class Game
     
     public Player GetCurrentPlayer() => _currentPlayer;
     public void SwitchPlayer() => _currentPlayer = _currentPlayer == _player1 ? _player2 : _player1;
+    public bool IsBoardFull() => _board.IsFull();
 }

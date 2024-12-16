@@ -26,4 +26,5 @@ public sealed class Board
     }
     
     public char[] GetSquares() => _squares;
+    public bool IsFull() => false;
 }
