@@ -61,6 +61,16 @@ public sealed class Game
         {
             Console.WriteLine($"{_currentPlayer.Name} turn");
 
+            var square = _board.GetRandomEmptySquare();
+            CurrentPlayerMakeMove(square);
+
+            var winner = IsThereAWinner();
+            if (winner != '\0')
+            {
+                Console.WriteLine($"{_currentPlayer.Name} wins!");
+                return "winner";
+            }
+
             SwitchPlayer();
         }
 

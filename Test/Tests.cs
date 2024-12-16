@@ -124,7 +124,7 @@ public class Tests
     }
     
     [Fact]
-    public void AutoPlay_ThereshouldBeAWinnerOfTheGame_ShouldReturnWinner()
+    public void AutoPlay_ThereShouldBeAWinnerOfTheGame_ShouldReturnWinner()
     {
         // Arrange
         var game = new Game();
