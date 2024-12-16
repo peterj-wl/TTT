@@ -53,6 +53,20 @@ public sealed class Game
         _currentPlayer.PlaceMarker(_board, square);
     }
     
+    public string AutoPlayGame()
+    {
+        Console.WriteLine($"Board is created. {_currentPlayer.Name} will start the game.");
+
+        for (int i = 0; i < 9; i++)
+        {
+            Console.WriteLine($"{_currentPlayer.Name} turn");
+
+            SwitchPlayer();
+        }
+
+        return string.Empty;
+    }
+    
     public Player GetCurrentPlayer() => _currentPlayer;
     public void SwitchPlayer() => _currentPlayer = _currentPlayer == _player1 ? _player2 : _player1;
     public bool IsBoardFull() => _board.IsFull();

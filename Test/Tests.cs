@@ -108,7 +108,7 @@ public class Tests
         Assert.Equal('\0', winner);
     }
     
-        [Fact]
+    [Fact]
     public void IsBoardFull_AllPositionsIsTakenOnBoard_ShouldReturnThatBoardIsFull()
     {
         // Arrange
@@ -121,5 +121,18 @@ public class Tests
 
         // Assert
         Assert.True(game.IsBoardFull());
+    }
+    
+    [Fact]
+    public void AutoPlay_ThereshouldBeAWinnerOfTheGame_ShouldReturnWinner()
+    {
+        // Arrange
+        var game = new Game();
+        
+        // Act
+        var result = game.AutoPlayGame();
+        
+        // Assert
+        Assert.True(result is "winner");
     }
 }
