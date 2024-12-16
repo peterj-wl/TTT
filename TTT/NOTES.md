@@ -25,3 +25,13 @@ output = a random square that is free in the board (e.g square 8). If the board 
 -Place marker
 input = a square position (e.g. 1)
 output = board will now have a marker on square position 1
+
+
+### Goal: Create the Game according to the rules which is set for the game (readme) also create Check for winner and wrapper for current player place a marker
+### Time 🍅
+### Notes:
+-Get winner
+input = none
+output = will output either a '\0' (null = no winner) or a winner with either 'X' or 'O'
+
+winning combinations (in readme)
