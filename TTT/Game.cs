@@ -55,6 +55,7 @@ public sealed class Game
     
     public string AutoPlayGame()
     {
+        DisplayBoard();
         Console.WriteLine($"Board is created. {_currentPlayer.Name} will start the game.");
 
         for (int i = 0; i < 9; i++)
@@ -63,6 +64,8 @@ public sealed class Game
 
             var square = _board.GetRandomEmptySquare();
             CurrentPlayerMakeMove(square);
+            
+            DisplayBoard();
 
             var winner = IsThereAWinner();
             if (winner != '\0')
@@ -80,4 +83,5 @@ public sealed class Game
     public Player GetCurrentPlayer() => _currentPlayer;
     public void SwitchPlayer() => _currentPlayer = _currentPlayer == _player1 ? _player2 : _player1;
     public bool IsBoardFull() => _board.IsFull();
+    private void DisplayBoard() => _board.DisplayBoard();
 }

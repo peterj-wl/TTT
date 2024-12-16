@@ -12,6 +12,23 @@ public sealed class Board
         return freeSquares[random.Next(freeSquares.Count)];
     }
     
+    public void DisplayBoard()
+    {
+        Console.WriteLine("Current Board:");
+        Console.WriteLine("|---|---|---|");
+        for (var i = 0; i < 3; i++)
+        {
+            Console.Write("|");
+            for (var j = 0; j < 3; j++)
+            {
+                var cell = _squares[i * 3 + j] == '\0' ? ' ' : _squares[i * 3 + j];
+                Console.Write($" {cell} |");
+            }
+            Console.WriteLine();
+            Console.WriteLine("|---|---|---|");
+        }
+    }
+    
     private List<int> GetAvailableSquares()
     {
         var availableSquares = new List<int>();
