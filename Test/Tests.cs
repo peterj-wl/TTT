@@ -51,6 +51,7 @@ public class Tests
     [Theory]
     [InlineData(0,1,2)]
     [InlineData(0,3,6)]
+    [InlineData(0,4,8)]
     public void IsThereAWinner_XPlaces3Markers_ShouldReturnXAsWinner(int square1, int square2, int square3)
     {
         // Arrange
