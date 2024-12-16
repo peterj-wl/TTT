@@ -26,5 +26,5 @@ public sealed class Board
     }
     
     public char[] GetSquares() => _squares;
-    public bool IsFull() => false;
+    public bool IsFull() => _squares.All(square => square != '\0');
 }
