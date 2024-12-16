@@ -66,6 +66,8 @@ public sealed class Game
             CurrentPlayerMakeMove(square);
             
             DisplayBoard();
+            
+            Thread.Sleep(2000);
 
             var winner = IsThereAWinner();
             if (winner != '\0')
