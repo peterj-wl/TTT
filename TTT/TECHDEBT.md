@@ -8,4 +8,4 @@
 
 Pomodoro 1: Need to fix a check if there is no squares left
 
-Pomodoro 2: Maybe need to fix that Name should be public if it is going to be visible in the Game
+~~Pomodoro 2: Maybe need to fix that Name should be public if it is going to be visible in the Game~~
