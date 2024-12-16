@@ -31,4 +31,20 @@ public class Tests
         // Assert
         Assert.Equal(expectedBoard, board.GetSquares());
     }
+    
+    [Fact]
+    public void SwitchingPlayers_SwitchPlayerFromCurrentToNextPlayer_ShouldReturnNextPlayerWhichIsBot2()
+    {
+        // Arrange
+        var game = new Game();
+        var playerBeforeSwitch = game.GetCurrentPlayer().Name;
+
+        // Act
+        game.SwitchPlayer();
+        var playerAfterSwitch = game.GetCurrentPlayer().Name;
+
+        // Assert
+        Assert.Equal("Bot 1", playerBeforeSwitch);
+        Assert.Equal("Bot 2", playerAfterSwitch);
+    }
 }

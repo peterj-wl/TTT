@@ -18,4 +18,7 @@ public sealed class Game
 
         _currentPlayer = _player1;
     }
+    
+    public Player GetCurrentPlayer() => _currentPlayer;
+    public void SwitchPlayer() => _currentPlayer = _player1;
 }
