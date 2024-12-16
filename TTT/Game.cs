@@ -31,6 +31,13 @@ public sealed class Game
             {
                 return 'X';
             }
+            
+            if (squares[0] == 'X' &&
+                squares[3] == 'X' &&
+                squares[6] == 'X')
+            {
+                return 'X';
+            }
         }
 
         return '\0';
