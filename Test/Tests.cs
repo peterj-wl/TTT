@@ -65,4 +65,23 @@ public class Tests
         // Assert
         Assert.Equal('X', winner);
     }
+    
+    [Theory]
+    [InlineData(0,2,4)]
+    public void IsThereAWinner_NoWinner_ShouldReturnNoWinner(int square1, int square2, int square3)
+    {
+        // Arrange
+        var game = new Game();
+        
+        game.SwitchPlayer();
+        game.CurrentPlayerMakeMove(square1);
+        game.CurrentPlayerMakeMove(square2);
+        game.CurrentPlayerMakeMove(square3);
+
+        // Act
+        char winner = game.IsThereAWinner();
+
+        // Assert
+        Assert.Equal('\0', winner);
+    }
 }
