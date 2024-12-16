@@ -21,6 +21,18 @@ public sealed class Game
     
     public char IsThereAWinner()
     {
+        var squares = _board.GetSquares();
+
+        foreach (var combination in squares)
+        {
+            if (squares[0] == 'X' &&
+                squares[1] == 'X' &&
+                squares[2] == 'X')
+            {
+                return 'X';
+            }
+        }
+
         return '\0';
     }
     
