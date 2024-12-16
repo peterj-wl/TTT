@@ -21,29 +21,27 @@ public sealed class Game
     
     public char IsThereAWinner()
     {
+        var winningCombinations = new[]
+        {
+            new[] { 0, 1, 2 },
+            new[] { 3, 4, 5 },
+            new[] { 6, 7, 8 },
+            new[] { 0, 3, 6 },
+            new[] { 1, 4, 7 },
+            new[] { 2, 5, 8 },
+            new[] { 0, 4, 8 },
+            new[] { 2, 4, 6 }
+        };
+
         var squares = _board.GetSquares();
 
-        foreach (var combination in squares)
+        foreach (var combination in winningCombinations)
         {
-            if (squares[0] == 'X' &&
-                squares[1] == 'X' &&
-                squares[2] == 'X')
+            if (squares[combination[0]] != '\0' &&
+                squares[combination[0]] == squares[combination[1]] &&
+                squares[combination[0]] == squares[combination[2]])
             {
-                return 'X';
-            }
-            
-            if (squares[0] == 'X' &&
-                squares[3] == 'X' &&
-                squares[6] == 'X')
-            {
-                return 'X';
-            }
-            
-            if (squares[0] == 'X' &&
-                squares[4] == 'X' &&
-                squares[8] == 'X')
-            {
-                return 'X';
+                return squares[combination[0]];;
             }
         }
 
