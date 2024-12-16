@@ -62,10 +62,31 @@ public class Tests
         game.CurrentPlayerMakeMove(square3);
 
         // Act
-        char winner = game.IsThereAWinner();
+        var winner = game.IsThereAWinner();
 
         // Assert
         Assert.Equal('X', winner);
+    }
+    
+    [Theory]
+    [InlineData(0,1,2)]
+    [InlineData(0,3,6)]
+    [InlineData(0,4,8)]
+    public void IsThereAWinner_OPlaces3Markers_ShouldReturnOAsWinner(int square1, int square2, int square3)
+    {
+        // Arrange
+        var game = new Game();
+        
+        game.SwitchPlayer();
+        game.CurrentPlayerMakeMove(square1);
+        game.CurrentPlayerMakeMove(square2);
+        game.CurrentPlayerMakeMove(square3);
+
+        // Act
+        var winner = game.IsThereAWinner();
+
+        // Assert
+        Assert.Equal('O', winner);
     }
     
     [Theory]
@@ -81,7 +102,7 @@ public class Tests
         game.CurrentPlayerMakeMove(square3);
 
         // Act
-        char winner = game.IsThereAWinner();
+        var winner = game.IsThereAWinner();
 
         // Assert
         Assert.Equal('\0', winner);
