@@ -133,6 +133,6 @@ public class Tests
         var result = game.AutoPlayGame();
         
         // Assert
-        Assert.True(result is "winner");
+        Assert.True(result is "winner" or "draw");
     }
 }

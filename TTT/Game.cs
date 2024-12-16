@@ -73,6 +73,12 @@ public sealed class Game
                 Console.WriteLine($"{_currentPlayer.Name} wins!");
                 return "winner";
             }
+            
+            if (IsBoardFull())
+            {
+                Console.WriteLine("Its a draw!");
+                return "draw";
+            }
 
             SwitchPlayer();
         }
