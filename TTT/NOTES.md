@@ -35,3 +35,13 @@ input = none
 output = will output either a '\0' (null = no winner) or a winner with either 'X' or 'O'
 
 winning combinations (in readme)
+
+
+
+### Goal: Create the autoplay also go through the techdebt and see if there is something to be fixed
+### Time 🍅
+### Notes:
+-Autoplay
+input = none
+output = will output either "winner" or "draw" and who was the winner (name).
+It will write out each round in console which player have made a marker place on a free square until game is over (9 rounds)
