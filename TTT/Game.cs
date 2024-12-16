@@ -19,6 +19,16 @@ public sealed class Game
         _currentPlayer = _player1;
     }
     
+    public char IsThereAWinner()
+    {
+        return '\0';
+    }
+    
+    public void CurrentPlayerMakeMove(int square)
+    {
+        _currentPlayer.PlaceMarker(_board, square);
+    }
+    
     public Player GetCurrentPlayer() => _currentPlayer;
     public void SwitchPlayer() => _currentPlayer = _currentPlayer == _player1 ? _player2 : _player1;
 }

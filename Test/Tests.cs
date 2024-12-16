@@ -47,4 +47,22 @@ public class Tests
         Assert.Equal("Bot 1", playerBeforeSwitch);
         Assert.Equal("Bot 2", playerAfterSwitch);
     }
+    
+    [Theory]
+    [InlineData(0,1,2)]
+    public void IsThereAWinner_XPlaces3Markers_ShouldReturnXAsWinner(int square1, int square2, int square3)
+    {
+        // Arrange
+        var game = new Game();
+        
+        game.CurrentPlayerMakeMove(square1);
+        game.CurrentPlayerMakeMove(square2);
+        game.CurrentPlayerMakeMove(square3);
+
+        // Act
+        char winner = game.IsThereAWinner();
+
+        // Assert
+        Assert.Equal('X', winner);
+    }
 }
