@@ -20,5 +20,5 @@ public sealed class Game
     }
     
     public Player GetCurrentPlayer() => _currentPlayer;
-    public void SwitchPlayer() => _currentPlayer = _player1;
+    public void SwitchPlayer() => _currentPlayer = _player2;
 }
